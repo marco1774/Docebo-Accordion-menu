@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./accordion.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Accordion demo title</title>
+    <script type="text/javascript" src="./accordion.js"></script>
+  </head>
+  <body>
+    <h1>Accordion demo page</h1>
+    <div id="my-accordion"></div>
+
+    <script type="text/javascript">
+      var options = {
+        container: "my-accordion",
+        mainTitle: "Main accordion title",
+        panels: [
+          {
+            title: "My profile",
+            subtitle: "Update your profile information",
+            content:
+              "<p> Toggles between a class name for an element.The first parameter removes the specified class from an element, and returns false.If the class does not exist, it is added to the element, and the return value is true.The optional second parameter is a Boolean value that forces the class to be added or removed, regardless of whether or not it already existed. </p>"
+          },
+          {
+            title: "Change password",
+            subtitle: "Change your login password",
+            content:
+              "<p>To show the menu content, we need to re-define it’s height. When the content is shown, the height of menu item equals to total height of its A and P children (including padding).</p>"
+          },
+          {
+            title: "New Panel",
+            subtitle: "This panel is new",
+            content:
+              "<p>To show the menu content, we need to re-define it’s height. When the content is shown, the height of menu item equals to total height of its A and P children (including padding).</p>"
+          }
+        ]
+      };
+      var accordion = new Accordion(options);
+    </script>
+  </body>
+</html>
